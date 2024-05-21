@@ -56,4 +56,4 @@ def agent_loop(agent_path):
         loop.run()
     except KeyboardInterrupt:
         loop.quit()
-        agent_manager.UnregisterAgent(agent_path)
+        agent_manager.UnregisterAgent(agent_path) 
