@@ -1,12 +1,18 @@
-import binascii, bluetooth, sys, time, datetime, logging, argparse
+import binascii
+import bluetooth
+import sys
+import time
+import datetime
+import logging
+import argparse
 from multiprocessing import Process
 from pydbus import SystemBus
 from enum import Enum
 import subprocess
 import os
 
-from utils.menu_functions import (main_menu, read_duckyscript, run, restart_bluetooth_daemon, get_target_address)
-from utils.register_device import register_hid_profile, agent_loop
+from menu_functions import (main_menu, read_duckyscript, run, restart_bluetooth_daemon, get_target_address)
+from register_device import register_hid_profile, agent_loop
 
 child_processes = []
 
@@ -433,7 +439,7 @@ def char_to_key_code(char):
         '+': 'KEYPADPLUS',
         '{': 'LEFTBRACE',
         '}': 'RIGHTBRACE',
-        ': 'SEMICOLON',
+        ':': 'SEMICOLON',
         '\\': 'BACKSLASH',
         '"': 'QUOTE',
         '<': 'COMMA',
